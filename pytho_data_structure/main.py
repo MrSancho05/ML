@@ -92,3 +92,25 @@
 # # Attemping to modify a tuple (Raises TypeError)
 # # tup[1] = 'new_value' # Uncommenting this will raise an error
 
+
+
+# Practice simple login 
+
+# users = []
+
+# while True:
+#     username = input('Enter your name (or type `exit` to stop): ')
+
+#     if username == '':
+#         print('Name cannot be empty')
+#         # continue
+
+#     elif username.lower() == 'exit':
+#         break
+#     else:
+#         users.append(username)
+#         print(f'Current users lists: {users}')
+
+
+# print('Final users lists: ', users)
+    
