@@ -96,48 +96,142 @@
 
 # Practice simple login 
 
-users = []
+# users = []
 
-def login():
-    while True:
-        username = input('Enter your name (or type `exit` to stop): ').strip()
+# def login():
+#     while True:
+#         username = input('Enter your name (or type `exit` to stop): ').strip()
 
-        if username == '':
-            print('Name cannot be empty')
-            continue
+#         if username == '':
+#             print('Name cannot be empty')
+#             continue
 
-        elif username.lower() == 'exit':
-            break
-        else:
-            users.append(username)
-            print(f'Current users lists: {users}')
+#         elif username.lower() == 'exit':
+#             break
+#         else:
+#             users.append(username)
+#             print(f'Current users lists: {users}')
     
-    return users
+#     return users
 
 
-def remove():
-    while True:
-        if not users:
-            print('users list is empty')
-            break
+# def remove():
+#     while True:
+#         if not users:
+#             print('users list is empty')
+#             break
         
-        print('Current users lists: ', users)
-        name = input('Enter name (or type `exit` to stop): ').strip()
+#         print('Current users lists: ', users)
+#         name = input('Enter name (or type `exit` to stop): ').strip()
 
-        if name.lower() == 'exit':
-            break
-        elif name in users:
-            users.remove(name)
-            print(f'User {name} removed, users lists: {users}')
-        else:
-            print('User not found!')
+#         if name.lower() == 'exit':
+#             break
+#         elif name in users:
+#             users.remove(name)
+#             print(f'User {name} removed, users lists: {users}')
+#         else:
+#             print('User not found!')
     
-    return users
+#     return users
 
-l = login()
-r = remove()
-print('Final users lists: ', users)
+# l = login()
+# r = remove()
+# print('Final users lists: ', users)
+
+# users = []
+# def add_name():
+#     while True:
+#         name = input('Enter name (or `exit` command for stop): ').strip()
+
+#         if not name:
+#             print('name cannot be empty')
+#             continue 
+
+#         elif name.lower() == 'exit':
+#             print('The app stopped!')
+#             break
+
+#         else:
+#             users.append(name)
+#             print(f'User list: {users}')
+#     return users
+
+# add_name()
+
+# 2 task
+l = ['John', 'Darek', 'John', 'Ronald', 'Darek']
+
+l_into_s = set(l)
+
+print(l_into_s)
+
+# 3 task
+tup = (16, 'February', 2005)
+print(tup[1])
 
 
-    
+# Stacks and Queues
+#  Stacks va Queues — bu data structure lar bo‘lib, real hayotdagi tartib va navbat mantiqini kodda ifodalaydi. Juda ko‘p joyda ishlatiladi: backend, OS, browser, undo/redo, task scheduling va hokazo.
+
+# STACK - LIFO - Last In, First Out - oxirgi kirgan - birinchi chiqadi
+
+# 🍽 Real hayot misoli
+
+# Idishlarni ustma-ust qo‘yish:
+
+# Oxirgi qo‘yilgan likopcha
+
+# birinchi olinadi
+
+# stack = []
+
+# stack.append('a')
+# stack.append('b')
+# stack.append('c')
+
+# print(stack)
+
+# el = stack.pop()
+
+# print(el)
+# print(stack)
+
+
+# QUEUE (Navbat)
+# FIFO - First In, First Out
+# Birinchi kirgan — birinchi chiqadi.
+
+# 🎟 Real hayot misoli
+
+# Do‘kondagi navbat:
+
+# Birinchi kelgan odam
+
+# birinchi xizmat oladi
+
+# queue = []
+
+# queue.append('a')
+# queue.append('b')
+# queue.append('c')
+
+# print(queue) 
+# el = queue.pop(0)
+# print(el)
+# print(queue)
+
+
+# from collections import deque 
+
+# queue = deque()
+
+# queue.append('User1')
+# queue.append('User2')
+# queue.append('User3')
+
+# print(queue)
+
+# queue.popleft()
+# queue.appendleft('5')
+# print(queue)
 
