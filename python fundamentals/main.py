@@ -1,10 +1,11 @@
 # TASKS FOR BEGINNERS
 # 1. simple calculation
+# print('Simple calculation')
 # num1 = int(input('1chi sonni kiriting: '))
 # num2 = int(input('2chi sonni kiriting: '))
 # action = input('Ikkta son ustida bajarmoqchi bo`lgan amalni kiriting: ')
 
-# def calcutation(n, n2, ac):
+# def calculation(n, n2, ac):
 #     match ac:
 #         case '+':
 #             return f'{n} + {n2} = {n + n2}'
@@ -21,28 +22,22 @@
 #                 return '0 ga bo`lib bo`lmaydi'
 #             return f'{n} // {n2} = {n // n2}'
 #         case '%':
+#             if n2 == 0:
+#                 return '0 ga bo`lib bo`lmaydi' 
 #             return f'{n} % {n2} = {n % n2}'
     
     
-# c = calcutation(num1, num2, action)
+# c = calculation(num1, num2, action)
 
 # print(c)
 
 
 # 2. Even or Odd
-# print('\n')
-# print('2nd Task')
+# print('Even or Odd')
 # num = int(input('Son kiriting: '))
 
 # def even_or_odd(n):
-#     if n <= 0:
-#         return 'The number must be greater then 0'
-    
-#     if n % 2 == 0:
-#         return 'Even'
-#     else:
-#         return 'Odd'
-
+#     return 'Even' if n % 2 == 0 else 'Odd'
 
 # result = even_or_odd(num)
 # print(result)
@@ -50,9 +45,13 @@
 
 # 3. from 1 to N
 # n = int(input('Enter n number: '))
+# total = 0
 
 # for i in range(1, n):
+#     total += i
 #     print(i)
+
+# print(f'Sum: {total}')
 
 
 # TASKS FOR INTERMIDIATE 
@@ -62,16 +61,18 @@
 
 # def grade(s):
 #     if 90 <= s <= 100:
-#         return 'A'
+#         return 'Your grade is: A'
 #     elif 75 <= s <= 89:
-#         return 'B'
+#         return 'Your grade is: B'
 #     elif 60 <= s <= 74:
-#         return 'C'
+#         return 'Your grade is: C'
+#     elif not 0 <= s <= 100:
+#         return 'Invalid score'
 #     else:
-#         return 'F'
+#         return 'Your grade is: F'
     
 # result = grade(score)
-# print(f'Your grade is {result}')
+# print(result)
 
 # 2. Statistics of nums
 # print('Statistics of numbers')
@@ -82,7 +83,7 @@
 # num5 = int(input('Enter 5th number: '))
 
 # nums = []
-# nums.append(num)
+# nums.append(num)    
 # nums.append(num2)
 # nums.append(num3)
 # nums.append(num4)
@@ -100,24 +101,29 @@
     
 #     medium_arifmetic += nums[i]
 
-
-# print(f'Max number is: {max_number}') 
-# print(f'Min number is: {min_number}') 
-# print(f'Medium arifmetics: {medium_arifmetic // 5}')
-
+# print(f'Max number is: {max_number}, with max func {max(nums)}') 
+# print(f'Min number is: {min_number}, with min func {min(nums)}') 
+# print(f'Medium arifmetics: {medium_arifmetic / len(nums)}')
+# print(sum(nums))
 
 # 3. Check password
-# print('Check password')
-# correct_password = 'hiBye'
-# password = input('Enter password: ')
+print('Check password')
+correct_password = 'hiBye'
+password = input('Enter password: ')
+attemps = 3
 
-# while True:
-#     if correct_password == password:
-#         print('Welcome!')
-#         break
-#     else:
-#         print('Wrong password!')
-#         password = input('Enter password: ')
+while True:
+    if correct_password == password:
+        print('Welcome!')
+        break
+    else:
+        if attemps < 1:
+            print('Your attemps is over:(')
+            break
+        attemps -= 1
+        print(f'Wrong password! \n You have {attemps + 1} attemps!')
+        password = input('Enter password: ')
+        
 
 
 # TASKS FOR ADVANCED 
@@ -160,24 +166,24 @@
 
 
 # 3. Nested function
-num = int(input('Enter 1st number: '))
-num2 = int(input('Enter 2nd number: '))
-action = input('(add/substract/multiply/divide): ')
+# num = int(input('Enter 1st number: '))
+# num2 = int(input('Enter 2nd number: '))
+# action = input('(add/substract/multiply/divide): ')
 
-def calculator(n,n2):
-    match action:
-        case 'add':
-                return n + n2
-        case 'substract':
-                return n - n2
-        case 'multiply':
-                return n * n2
-        case 'divide':
-                if n2 == 0:
-                    raise ZeroDivisionError("Cannot divide by zero")
-                return n // n2
-        case _:
-                return 'Invalid operation'
+# def calculator(n,n2):
+#     match action:
+#         case 'add':
+#                 return n + n2
+#         case 'substract':
+#                 return n - n2
+#         case 'multiply':
+#                 return n * n2
+#         case 'divide':
+#                 if n2 == 0:
+#                     raise ZeroDivisionError("Cannot divide by zero")
+#                 return n // n2
+#         case _:
+#                 return 'Invalid operation'
 
-calc = calculator(num, num2)
-print(calc)
+# calc = calculator(num, num2)
+# print(calc)
