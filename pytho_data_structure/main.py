@@ -96,21 +96,48 @@
 
 # Practice simple login 
 
-# users = []
+users = []
 
-# while True:
-#     username = input('Enter your name (or type `exit` to stop): ')
+def login():
+    while True:
+        username = input('Enter your name (or type `exit` to stop): ').strip()
 
-#     if username == '':
-#         print('Name cannot be empty')
-#         # continue
+        if username == '':
+            print('Name cannot be empty')
+            continue
 
-#     elif username.lower() == 'exit':
-#         break
-#     else:
-#         users.append(username)
-#         print(f'Current users lists: {users}')
-
-
-# print('Final users lists: ', users)
+        elif username.lower() == 'exit':
+            break
+        else:
+            users.append(username)
+            print(f'Current users lists: {users}')
     
+    return users
+
+
+def remove():
+    while True:
+        if not users:
+            print('users list is empty')
+            break
+        
+        print('Current users lists: ', users)
+        name = input('Enter name (or type `exit` to stop): ').strip()
+
+        if name.lower() == 'exit':
+            break
+        elif name in users:
+            users.remove(name)
+            print(f'User {name} removed, users lists: {users}')
+        else:
+            print('User not found!')
+    
+    return users
+
+l = login()
+r = remove()
+print('Final users lists: ', users)
+
+
+    
+
