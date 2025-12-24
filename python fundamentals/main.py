@@ -107,26 +107,26 @@
 # print(sum(nums))
 
 # 3. Check password
-print('Check password')
-correct_password = 'hiBye'
-password = input('Enter password: ')
-attemps = 3
+# print('Check password')
+# correct_password = 'hiBye'
+# password = input('Enter password: ')
+# attemps = 3
 
-while True:
-    if correct_password == password:
-        print('Welcome!')
-        break
-    else:
-        if attemps < 1:
-            print('Your attemps is over:(')
-            break
-        attemps -= 1
-        print(f'Wrong password! \n You have {attemps + 1} attemps!')
-        password = input('Enter password: ')
-        
+# while True:
+#     if correct_password == password:
+#         print('Welcome!')
+#         break
+#     else:
+#         attemps -= 1
+#         if attemps == 0:
+#             print('Your attemps is over:(')
+#             break
+#         print(f'Wrong password! \n You have {attemps} attemps!')
+#         password = input('Enter password: ')
 
 
 # TASKS FOR ADVANCED 
+# print('Global 🌍 & Local 🏡')
 # 1. SCOPE
 # global_var = 10
 
@@ -142,7 +142,7 @@ while True:
 
 
 # 2. COUNT NUMBERS
-# print('COUNT NUMBERS')
+# print('Number statistic 📈')
 # count_nums = 0
 # positive_nums = 0
 # negative_nums = 0
@@ -150,7 +150,7 @@ while True:
 
 # while True:
 #     n = int(input('Enter number: ')) 
-#     count_nums += 1
+
 #     if n > 0:
 #         positive_nums += 1
 #     elif n < 0:
@@ -158,6 +158,7 @@ while True:
 #     else:
 #         zero_count += 1
 #         break
+#     count_nums += 1
 
 # print(f'Numbers count: {count_nums}')
 # print(f'Positive numbers count: {positive_nums}')
