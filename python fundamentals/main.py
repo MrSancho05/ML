@@ -1,4 +1,4 @@
-# FOR BEGINNERS
+# TASKS FOR BEGINNERS
 # 1. simple calculation
 # num1 = int(input('1chi sonni kiriting: '))
 # num2 = int(input('2chi sonni kiriting: '))
@@ -55,7 +55,7 @@
 #     print(i)
 
 
-# INTERMIDIATE
+# TASKS FOR INTERMIDIATE 
 # 1. Grade system
 # print('Grade system')
 # score = int(input('Enter your score, to get result: '))
@@ -107,17 +107,77 @@
 
 
 # 3. Check password
-print('Check password')
-correct_password = 'hiBye'
-password = input('Enter password: ')
+# print('Check password')
+# correct_password = 'hiBye'
+# password = input('Enter password: ')
 
-while True:
-    if correct_password == password:
-        print('Welcome!')
-        break
-    else:
-        print('Wrong password!')
-        password = input('Enter password: ')
+# while True:
+#     if correct_password == password:
+#         print('Welcome!')
+#         break
+#     else:
+#         print('Wrong password!')
+#         password = input('Enter password: ')
 
-    
 
+# TASKS FOR ADVANCED 
+# 1. SCOPE
+# global_var = 10
+
+# def func():
+#     local_var = 5
+#     global global_var
+
+#     global_var += 1
+#     return local_var
+
+# local_var = func()
+# print(global_var, local_var)
+
+
+# 2. COUNT NUMBERS
+# print('COUNT NUMBERS')
+# count_nums = 0
+# positive_nums = 0
+# negative_nums = 0
+# zero_count = 0
+
+# while True:
+#     n = int(input('Enter number: ')) 
+#     count_nums += 1
+#     if n > 0:
+#         positive_nums += 1
+#     elif n < 0:
+#         negative_nums += 1
+#     else:
+#         zero_count += 1
+#         break
+
+# print(f'Numbers count: {count_nums}')
+# print(f'Positive numbers count: {positive_nums}')
+# print(f'Negative numbers count: {negative_nums}')
+# print(f'Numbers of zero: {zero_count}')
+
+
+# 3. Nested function
+num = int(input('Enter 1st number: '))
+num2 = int(input('Enter 2nd number: '))
+action = input('(add/substract/multiply/divide): ')
+
+def calculator(n,n2):
+    match action:
+        case 'add':
+                return n + n2
+        case 'substract':
+                return n - n2
+        case 'multiply':
+                return n * n2
+        case 'divide':
+                if n2 == 0:
+                    raise ZeroDivisionError("Cannot divide by zero")
+                return n // n2
+        case _:
+                return 'Invalid operation'
+
+calc = calculator(num, num2)
+print(calc)
