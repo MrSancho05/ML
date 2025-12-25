@@ -188,3 +188,84 @@
 
 # calc = calculator(num, num2)
 # print(calc)
+
+
+# Data types in Python
+# Python’da data type — bu ma’lumotning qaysi turga tegishli ekanini bildiradi.
+# Ma’lumot turi uning ustida qanday amal bajarish mumkinligini aniqlaydi.
+# Numeric: int, float, complex
+# Sequence Type: string, list, tuple
+# Mapping Type: dict
+# Boolean: bool
+# Set Type: set, frozenset
+# Binary Types: bytes, bytearray, memoryview
+
+# Python’da hamma narsa object hisoblanadi:
+
+# Data type → class
+
+# Variable → shu class’dan olingan object
+# Example of numeric types in Python
+
+a = 10
+b = 10.5
+c = 2 + 4j
+
+print(a, b, c)
+print(type(a), type(b), type(c))
+
+# Output 
+# <class 'int'> <class 'float'> <class 'complex'>
+
+# Example None and bool types
+# a = True
+# b = None
+
+# print(type(a), type(b))
+
+
+# Sequence - ketma-ket ma'lumotlarni o'zida saqlaydigan
+
+# s = 'Welcome to the Sequence world'
+
+# print(s, type(s))
+
+# print(s[8:])
+# print(s[2])
+# print(s[3])
+
+
+# type() build-in function
+# numeric
+n = 10
+n2 = 10.2
+
+print(type(n), type(n2))
+
+
+# sequence list, str, set, tuple
+
+l = [1,2,3] # integer list
+l2 = ['apple', 'orange', 'mango'] # string list
+l3 = [1, 1.5, 'lemon', True, [1,2,3]] # mixed list
+
+print(l3[0:3])
+
+l3[0] = 'text'
+l3[2] = 'orange'
+
+print(l3)
+
+l3.remove(True)
+
+print(l3)
+
+l3.pop()
+
+print(l3)
+
+# set
+s = {'first', 1, 2}
+
+
+

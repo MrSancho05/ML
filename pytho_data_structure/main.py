@@ -9,11 +9,11 @@
 # Pythondagi list lar tartibli va har xil typega ega o'zgaruvchi ma'lumotlarni o'z ichida saqlaydi. O'zining soddaligi va moslashuvchanligi sababli Pythonda ishlatiladigan data structerlardan
 
 # Key Characteristics:
-
 # Mutable: Elements can be modified after creation.
 # Ordered: Maintains the order of elements.
 # Allows Duplicates: Can have multiple occurrences of the same value.
 # Heterogeneous: Can store different data types.
+
 # creating a list
 # a = [1,2,'Python', True, '$', 1.5]
 
@@ -72,7 +72,6 @@
 # Python dagi tartiblangan lekin o'zgartirib bo'lmaydigan elementlar kolleksiyasi (to'plami). Ularni asosan element yaratilgandan keyin o'zgartirilmasligi uchun foydalaniladi.
 
 # Key Characteristics:
-
 # Immutable: Once created, elements cannot be modified.
 # Ordered: Maintains the order of elements.
 # Allows Duplicates: Can contain duplicate values.
@@ -159,15 +158,15 @@
 # add_name()
 
 # 2 task
-l = ['John', 'Darek', 'John', 'Ronald', 'Darek']
+# l = ['John', 'Darek', 'John', 'Ronald', 'Darek']
 
-l_into_s = set(l)
+# l_into_s = set(l)
 
-print(l_into_s)
+# print(l_into_s)
 
-# 3 task
-tup = (16, 'February', 2005)
-print(tup[1])
+# # 3 task
+# tup = (16, 'February', 2005)
+# print(tup[1])
 
 
 # Stacks and Queues
